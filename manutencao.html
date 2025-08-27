@@ -11,44 +11,46 @@
     <header>
         <div class="container">
             <a href="index.html"><img src="logo.jpeg" alt="Logo SMARTECH" class="logo-img"></a>
-            <nav>
+            <nav id="nav-menu">
                 <ul>
-                    <li><a href="#hero" class="nav-link">Início</a></li>
-                    <li><a href="#services" class="nav-link">Serviços</a></li>
-                    <li><a href="#process" class="nav-link">Como Funciona</a></li>
-                    <li><a href="#about" class="nav-link">Sobre</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
-                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                    <li><a href="index.html#hero">Início</a></li>
+                    <li><a href="index.html#services" class="active">Serviços</a></li>
+                    <li><a href="index.html#process">Como Funciona</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
                 </ul>
             </nav>
+            <div class="hamburger" id="hamburger-button">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
     </header>
     <main>
         <section class="service-page-header"><h1 class="section-title">Manutenção Completa</h1></section>
-
         <section class="container">
-
             <div class="service-nav">
-                <a href="index.html#services" class="back-button"><i class="fas fa-arrow-left"></i> Serviços</a>
+                <a href="index.html#services" class="back-button"><i class="fas fa-arrow-left"></i> Voltar aos Serviços</a>
                 <a href="formatacao.html" class="next-button">Próximo Serviço <i class="fas fa-arrow-right"></i></a>
             </div>
-
             <div class="service-content">
-                <img src="tecnico.jpg" alt="Técnico a consertar um computador">
+                <img src="https://images.unsplash.com/photo-1589923188902-c635e243a822?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Técnico consertando um computador">
                 <div>
                     <h2>Diagnóstico Preciso e Reparo Eficiente</h2>
-                    <p>O seu computador está lento, bloqueou e não lembra a senha, ou não liga? Oferecemos um serviço completo de diagnóstico para identificar a causa do problema, seja de hardware (peças físicas) ou software (sistema e programas). Realizamos a limpeza interna de componentes, troca de peças danificadas e otimização do sistema para que a sua máquina volte a funcionar como nova.</p>
+                    <p>Seu computador está lento, travando ou não liga? Oferecemos um serviço completo de diagnóstico para identificar a causa do problema, seja ele de hardware (peças físicas) ou software (sistema e programas). Realizamos a limpeza interna de componentes, troca de peças danificadas e otimização do sistema para que sua máquina volte a funcionar como nova.</p>
                 </div>
             </div>
             <div class="testimonial">
-                <p>"O meu notebook estava esquentando muito e desligava sozinho. A equipe da SMARTECH fez uma limpeza completa e trocou a pasta térmica. O serviço foi rápido e o resultado foi incrível. Recomendo!"</p>
-                <span>- João Augusto, Cliente Satisfeito</span>
+                <p>"Meu notebook estava superaquecendo e desligando sozinho. A equipe da SMARTECH fez uma limpeza completa e a troca da pasta térmica. O serviço foi rápido e o resultado foi incrível. Recomendo!"</p>
+                <span>- João Silva, Cliente Satisfeito</span>
             </div>
         </section>
         <section id="contact">
             <div class="container">
                 <h2 class="section-title">Precisa de Manutenção?</h2> 
-                <p>Fale connosco agora mesmo e solicite um orçamento sem compromisso!</p>
+                <p>Fale conosco agora mesmo e solicite um orçamento sem compromisso!</p>
                 <a href="https://wa.me/5582988481218?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20para%20manutenção." class="cta-button" target="_blank">
                     <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
                 </a>
@@ -62,7 +64,14 @@
             <p>&copy; 2025 SMARTECH - Soluções em Informática. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger-button');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
-
-
