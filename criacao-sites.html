@@ -8,48 +8,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
     <header>
         <div class="container">
             <a href="index.html"><img src="logo.jpeg" alt="Logo SMARTECH" class="logo-img"></a>
-            <nav>
+            <nav id="nav-menu">
                 <ul>
-                    <li><a href="#hero" class="nav-link">Início</a></li>
-                    <li><a href="#services" class="nav-link">Serviços</a></li>
-                    <li><a href="#process" class="nav-link">Como Funciona</a></li>
-                    <li><a href="#about" class="nav-link">Sobre</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
-                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                    <li><a href="index.html#hero">Início</a></li>
+                    <li><a href="index.html#services" class="active">Serviços</a></li>
+                    <li><a href="index.html#process">Como Funciona</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
                 </ul>
             </nav>
+            <div class="hamburger" id="hamburger-button">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
     </header>
-
     <main>
-        <section class="service-page-header">
-            <h1 class="section-title">Criação de Sites e Páginas Web</h1>
-        </section>
-
+        <section class="service-page-header"><h1 class="section-title">Criação de Sites e Páginas Web</h1></section>
         <section class="container">
-
             <div class="service-nav">
                 <a href="instalacao.html" class="back-button"><i class="fas fa-arrow-left"></i> Serviço Anterior</a>
             </div>
-
             <div class="service-content">
-                <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Código de programação num ecrã de portátil">
+                <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Código de programação em uma tela de notebook">
                 <div>
                     <h2>A Sua Presença Profissional na Internet</h2>
-                    <p>Ter um site hoje em dia é essencial para qualquer negócio. Criamos sites modernos, rápidos e responsivos, que se adaptam perfeitamente a computadores, tablets e smartphones. Seja um site institucional para a sua empresa, um portfólio para mostrar os seus trabalhos ou uma landing page para um produto específico, nós temos a solução ideal para voçê.</p>
+                    <p>Ter um site hoje em dia é essencial para qualquer negócio. Criamos sites modernos, rápidos e responsivos, que se adaptam perfeitamente a computadores, tablets e smartphones. Seja um site institucional para a sua empresa, um portfólio para mostrar os seus trabalhos ou uma landing page para um produto específico, nós temos a solução ideal para você.</p>
                 </div>
             </div>
-
             <div class="testimonial">
-                <p>"Contratei a SMARTECH para criar o site da minha loja e o resultado superou as minhas expectativas. O design ficou limpo, profissional e funciona perfeitamente no celular. Recomendo 100%!"</p>
+                <p>"Contratei a SMARTECH para criar o site da minha loja e o resultado superou as minhas expectativas. O design ficou limpo, profissional e funciona perfeitamente no smartphone. Recomendo 100%!"</p>
                 <span>- Ana Pereira, Empreendedora</span>
             </div>
         </section>
-
         <section id="contact">
             <div class="container">
                 <h2 class="section-title">Quer Criar o seu Site?</h2> 
@@ -60,11 +56,7 @@
             </div>
         </section>
     </main>
-
-    <a href="https://wa.me/5582988481218?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20fazer%20um%20orçamento." class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
+    <a href="https://wa.me/5582988481218?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20fazer%20um%20orçamento." class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <footer>
         <div class="container">
             <a href="index.html"><img src="logo.jpeg" alt="Logo SMARTECH" class="footer-logo"></a>
@@ -72,8 +64,14 @@
         </div>
     </footer>
 
+    
+    <script>
+        const hamburger = document.getElementById('hamburger-button');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
-
-
-
