@@ -12,7 +12,7 @@
     <header>
         <div class="container">
             <a href="index.html"><img src="logo.jpeg" alt="Logo SMARTECH" class="logo-img"></a>
-            <nav>
+            <nav id="nav-menu">
                 <ul>
                     <li><a href="#hero" class="nav-link">Início</a></li>
                     <li><a href="#services" class="nav-link">Serviços</a></li>
@@ -22,6 +22,11 @@
                     <li><a href="#contact" class="nav-link">Contato</a></li>
                 </ul>
             </nav>
+            <div class="hamburger" id="hamburger-button">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
     </header>
 
@@ -35,7 +40,7 @@
                 </a>
             </div>
         </section>
-
+        
         <section id="services">
             <div class="container">
                 <h2 class="section-title">Conheça Nossos Serviços</h2>
@@ -52,21 +57,9 @@
             <div class="container">
                 <h2 class="section-title">Como Funciona</h2>
                 <div class="process-steps">
-                    <div class="step">
-                        <i class="fas fa-comments"></i>
-                        <h3>1. Contato e Diagnóstico</h3>
-                        <p>Você entra em contato, descreve o problema e nós fazemos um diagnóstico inicial.</p>
-                    </div>
-                    <div class="step">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                        <h3>2. Orçamento Gratuito</h3>
-                        <p>Apresentamos um orçamento transparente e sem compromisso para a solução.</p>
-                    </div>
-                    <div class="step">
-                        <i class="fas fa-check-circle"></i>
-                        <h3>3. Execução do Serviço</h3>
-                        <p>Com a sua aprovação, executamos o serviço com agilidade e garantia de qualidade.</p>
-                    </div>
+                    <div class="step"><i class="fas fa-comments"></i><h3>1. Contato e Diagnóstico</h3><p>Você entra em contato, descreve o problema e nós fazemos um diagnóstico inicial.</p></div>
+                    <div class="step"><i class="fas fa-file-invoice-dollar"></i><h3>2. Orçamento Gratuito</h3><p>Apresentamos um orçamento transparente e sem compromisso para a solução.</p></div>
+                    <div class="step"><i class="fas fa-check-circle"></i><h3>3. Execução do Serviço</h3><p>Com a sua aprovação, executamos o serviço com agilidade e garantia de qualidade.</p></div>
                 </div>
             </div>
         </section>
@@ -81,18 +74,9 @@
         <section id="faq">
             <div class="container">
                 <h2 class="section-title">Perguntas Frequentes</h2>
-                <div class="faq-item">
-                    <p class="faq-question">O orçamento é gratuito?</p>
-                    <p class="faq-answer">Sim, todos os nossos orçamentos são gratuitos e sem compromisso. Você só paga se aprovar o serviço.</p>
-                </div>
-                <div class="faq-item">
-                    <p class="faq-question">Vocês atendem em domicílio?</p>
-                    <p class="faq-answer">Sim, oferecemos atendimento em domicílio para maior comodidade. Também temos a opção de recolha e entrega do equipamento.</p>
-                </div>
-                <div class="faq-item">
-                    <p class="faq-question">Quais são as formas de pagamento?</p>
-                    <p class="faq-answer">Aceitamos PIX, transferência bancária e cartões de débito e crédito.</p>
-                </div>
+                <div class="faq-item"><p class="faq-question">O orçamento é gratuito?</p><p class="faq-answer">Sim, todos os nossos orçamentos são gratuitos e sem compromisso. Você só paga se aprovar o serviço.</p></div>
+                <div class="faq-item"><p class="faq-question">Vocês atendem em domicílio?</p><p class="faq-answer">Sim, oferecemos atendimento em domicílio para maior comodidade. Também temos a opção de recolha e entrega do equipamento.</p></div>
+                <div class="faq-item"><p class="faq-question">Quais são as formas de pagamento?</p><p class="faq-answer">Aceitamos PIX, transferência bancária e cartões de débito e crédito.</p></div>
             </div>
         </section>
 
@@ -100,16 +84,12 @@
             <div class="container">
                 <h2 class="section-title">Entre em Contato</h2> 
                 <p>Precisa de ajuda? Fale diretamente conosco pelo WhatsApp, tire suas duvidas, é rápido e sem compromisso!</p>
-                <a href="https://wa.me/5582988481218?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento." class="cta-button" target="_blank">
-                    <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
-                </a>
+                <a href="https://wa.me/5582988481218?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento." class="cta-button" target="_blank"><i class="fab fa-whatsapp"></i> Chamar no WhatsApp</a>
             </div>
         </section>
     </main>
 
-    <a href="https://wa.me/5582988481218?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20fazer%20um%20orçamento." class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <a href="https://wa.me/5582988481218?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20fazer%20um%20orçamento." class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
 
     <footer>
         <div class="container">
@@ -121,22 +101,26 @@
     <script>
         const sections = document.querySelectorAll('section[id]');
         const navLinks = document.querySelectorAll('.nav-link');
-
         window.addEventListener('scroll', () => {
-            let current = 'hero'; // Default to hero
+            let current = 'hero';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 if (pageYOffset >= sectionTop - 150) {
                     current = section.getAttribute('id');
                 }
             });
-
             navLinks.forEach(link => {
                 link.classList.remove('active');
                 if (link.getAttribute('href') === `#${current}`) {
                     link.classList.add('active');
                 }
             });
+        });
+
+        const hamburger = document.getElementById('hamburger-button');
+        const navMenu = document.getElementById('nav-menu');
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
         });
     </script>
 
