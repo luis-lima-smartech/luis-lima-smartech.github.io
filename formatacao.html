@@ -8,64 +8,56 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-
     <header>
         <div class="container">
             <a href="index.html"><img src="logo.jpeg" alt="Logo SMARTECH" class="logo-img"></a>
-            <nav>
+            <nav id="nav-menu">
                 <ul>
-                    <li><a href="#hero" class="nav-link">Início</a></li>
-                    <li><a href="#services" class="nav-link">Serviços</a></li>
-                    <li><a href="#process" class="nav-link">Como Funciona</a></li>
-                    <li><a href="#about" class="nav-link">Sobre</a></li>
-                    <li><a href="#faq" class="nav-link">FAQ</a></li>
-                    <li><a href="#contact" class="nav-link">Contato</a></li>
+                    <li><a href="index.html#hero">Início</a></li>
+                    <li><a href="index.html#services" class="active">Serviços</a></li>
+                    <li><a href="index.html#process">Como Funciona</a></li>
+                    <li><a href="index.html#about">Sobre</a></li>
+                    <li><a href="index.html#faq">FAQ</a></li>
+                    <li><a href="index.html#contact">Contato</a></li>
                 </ul>
             </nav>
+            <div class="hamburger" id="hamburger-button">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
         </div>
     </header>
-
     <main>
-        <section class="service-page-header">
-            <h1 class="section-title">Formatação e Otimização</h1>
-        </section>
-
+        <section class="service-page-header"><h1 class="section-title">Formatação e Otimização</h1></section>
         <section class="container">
-
             <div class="service-nav">
                 <a href="manutencao.html" class="back-button"><i class="fas fa-arrow-left"></i> Serviço Anterior</a>
                 <a href="instalacao.html" class="next-button">Próximo Serviço <i class="fas fa-arrow-right"></i></a>
             </div>
-
             <div class="service-content">
-                <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Ecrã de computador com sistema operativo limpo">
+                <img src="https://images.unsplash.com/photo-1593642702821-c8da6771f0c6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080" alt="Tela de computador com sistema operacional limpo">
                 <div>
-                    <h2>Sistema Operacional Novo em Folha</h2>
-                    <p>Com o tempo, o sistema operacional pode ficar sobrecarregado com arquivos desnecessários, vírus e erros que causam lentidão. O nosso serviço de formatação restaura o seu computador ao estado de fábrica, realizando um backup seguro dos seus arquivos importantes, instalando uma cópia limpa do sistema operacioal (Windows ou Linux) e todos os drivers necessários.</p>
+                    <h2>Sistema Operacional Novo e Licenciado</h2>
+                    <p>Com o tempo, o sistema operacional pode ficar sobrecarregado com arquivos desnecessários, vírus e erros que causam lentidão. Nosso serviço de formatação restaura o seu computador ao estado de fábrica, realizando um backup seguro dos seus arquivos importantes, instalando uma cópia limpa do sistema operacional e todos os drivers necessários.</p>
                 </div>
             </div>
-
             <div class="testimonial">
                 <p>"O meu PC demorava uma eternidade pra ligar. Depois da formatação e otimização da SMARTECH, parece um computador novo. O serviço de backup foi essencial para não perder as minhas fotos."</p>
-                <span>- Maria Costa, Cliente Satisfeita</span>
+                <span>- Maria Eduarda, Cliente Satisfeita</span>
             </div>
         </section>
-
         <section id="contact">
             <div class="container">
                 <h2 class="section-title">Quer Deixar o seu PC Rápido?</h2> 
-                <p>Entre em contacto para agendar uma formatação e otimização completa!</p>
+                <p>Entre em contato para agendar uma formatação e otimização completa!</p>
                 <a href="https://wa.me/5582988481218?text=Olá!%20Gostaria%20de%20fazer%20um%20orçamento%20para%20formatação." class="cta-button" target="_blank">
                     <i class="fab fa-whatsapp"></i> Chamar no WhatsApp
                 </a>
             </div>
         </section>
     </main>
-
-    <a href="https://wa.me/5582988481218?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20fazer%20um%20orçamento." class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
+    <a href="https://wa.me/5582988481218?text=Olá!%20Vi%20o%20site%20e%20gostaria%20de%20fazer%20um%20orçamento." class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i></a>
     <footer>
         <div class="container">
             <a href="index.html"><img src="logo.jpeg" alt="Logo SMARTECH" class="footer-logo"></a>
@@ -73,10 +65,13 @@
         </div>
     </footer>
 
+    <script>
+        const hamburger = document.getElementById('hamburger-button');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+        });
+    </script>
 </body>
 </html>
-
-</body>
-
-</html>
-
